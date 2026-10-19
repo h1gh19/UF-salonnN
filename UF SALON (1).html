@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UF SALON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F2EF;
+  --ink:#23211E;
+  --muted:#6F6A63;
+  --gold:#A8844A;
+  --line:#D9D5CD;
+  --panel:#EAE8E3;
+  --serif:"Cormorant Garamond","Times New Roman",serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1E1C19;--ink:#EDEAE3;--muted:#A19B91;--gold:#C9A468;--line:#38352F;--panel:#26231F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1E1C19;--ink:#EDEAE3;--muted:#A19B91;--gold:#C9A468;--line:#38352F;--panel:#26231F;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.brand{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.14em;text-decoration:none}
+nav{display:flex;gap:28px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:56px 0 96px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,7vw,92px);line-height:1.02;margin:0 0 26px;letter-spacing:-.01em}
+.hero p{max-width:34em;margin:0 0 36px;color:var(--muted);font-size:18px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;border:1px solid var(--ink);text-decoration:none;font-size:15px;font-weight:400;transition:background .2s,color .2s}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.solid:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+.emblem{width:100%;max-width:400px;justify-self:center;color:var(--gold)}
+.emblem svg{width:100%;height:auto;display:block}
+.ring{transform-origin:200px 200px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}html{scroll-behavior:auto}}
+
+section{padding:88px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0 0 40px}
+.two{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.two p{margin:0 0 18px;max-width:36em}
+.lead{font-family:var(--serif);font-size:26px;line-height:1.35;font-weight:500}
+
+.services{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.services li{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;padding:26px 0;border-bottom:1px solid var(--line)}
+.services strong{font-family:var(--serif);font-weight:500;font-size:26px}
+.services span{color:var(--muted)}
+
+.contact{background:var(--panel)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.contact a.big{display:block;font-family:var(--serif);font-size:clamp(30px,4vw,46px);text-decoration:none;line-height:1.25}
+.contact a.big:hover{color:var(--gold)}
+.contact p{margin:0 0 20px;color:var(--muted)}
+
+footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:760px){
+  .hero,.two,.services li,.contact-grid{grid-template-columns:1fr;gap:20px}
+  .hero{padding:24px 0 64px}
+  .emblem{max-width:260px;order:-1;justify-self:start}
+  nav{gap:18px}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#top">UF SALON</a>
+    <nav>
+      <a href="#uilchilgee">Үйлчилгээ</a>
+      <a href="#bidnii-tuhai">Бидний тухай</a>
+      <a href="#kholbogdokh">Холбогдох</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Таны үсний хамгийн сайн хувилбар.</h1>
+        <p>UF SALON бол үсний засалт, будалт, арчилгааны салон. Танд ямар төрх очихыг хамт сонгож, нямбай хийж өгнө.</p>
+        <div class="btns">
+          <a class="btn solid" href="tel:95486677">Залгах</a>
+          <a class="btn ghost" href="https://www.instagram.com/uf.salon" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="emblem" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none" stroke="currentColor">
+          <circle cx="200" cy="200" r="190" stroke-width="1.5"/>
+          <circle cx="200" cy="200" r="120" stroke-width="1"/>
+          <defs><path id="c" d="M200,200 m-155,0 a155,155 0 1,1 310,0 a155,155 0 1,1 -310,0"/></defs>
+          <g class="ring">
+            <text fill="currentColor" stroke="none" font-family="Jost,sans-serif" font-size="17" letter-spacing="9" font-weight="400">
+              <textPath href="#c">UF SALON • HAIR • STYLE • UF SALON • HAIR • STYLE • UF SALON • HAIR • STYLE •</textPath>
+            </text>
+          </g>
+          <text x="200" y="222" text-anchor="middle" fill="currentColor" stroke="none" font-family="Cormorant Garamond,serif" font-size="84" font-weight="600" letter-spacing="2">UF</text>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <section id="uilchilgee">
+    <h2>Үйлчилгээ</h2>
+    <ul class="services">
+      <li><strong>Үс засалт</strong><span>Эрэгтэй, эмэгтэй, хүүхдийн засалт. Нүүрний хэлбэр, үсний байдалд тохируулна.</span></li>
+      <li><strong>Үс будалт</strong><span>Бүтэн будалт, өнгө сэргээлт, өнгө өөрчлөлт.</span></li>
+      <li><strong>Үсний арчилгаа</strong><span>Үсийг тэжээж, гэмтлийг сэргээх эмчилгээ.</span></li>
+      <li><strong>Үс янзлалт</strong><span>Ажил, баяр ёслол, зураг авалтад зориулсан янзлалт.</span></li>
+    </ul>
+  </section>
+
+  <section id="bidnii-tuhai">
+    <div class="two">
+      <h2>Бидний тухай</h2>
+      <div>
+        <p class="lead">Энгийн, цэвэрхэн, танд зохицсон.</p>
+        <p>UF SALON-д ирсэн хүн бүрийн хүсэл, үсний онцлогийг сонсож, хамгийн тохиромжтой шийдлийг санал болгодог. Бид хэт их юм хийхээс илүү зөв, цэвэрхэн хийхийг чухалчилна.</p>
+        <p>Шинэ төрх хүсэж байгаа ч, зүгээр л үсээ тохируулах гэж байгаа ч бидэнд ирээрэй.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kholbogdokh" class="contact" style="margin:0 -28px;padding-left:28px;padding-right:28px">
+    <h2>Холбогдох</h2>
+    <div class="contact-grid">
+      <div>
+        <p>Утсаар залгаарай.</p>
+        <a class="big" href="tel:95486677">9548 6677</a>
+        <a class="big" href="tel:96006904">9600 6904</a>
+      </div>
+      <div>
+        <p>Эсвэл Instagram дээр зурвас үлдээгээрэй.</p>
+        <a class="big" href="https://www.instagram.com/uf.salon" target="_blank" rel="noopener">@uf.salon</a>
+      </div>
+    </div>
+  </section>
+</div>
+<footer>
+  <div class="wrap"><span>© UF SALON</span><span>@uf.salon</span></div>
+</footer>
+</body>
+</html>
