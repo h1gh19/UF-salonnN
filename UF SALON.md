@@ -1,4 +1,4 @@
-[UF SALON](#top)
+[README.md](#top)
 
 [Үйлчилгээ](#uilchilgee) [Бидний тухай](#bidnii-tuhai) [Холбогдох](#kholbogdokh)
 
